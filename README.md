@@ -4,7 +4,11 @@ Now, it's time to practice querying related data in many-to-many relationships.
 
 ## Getting started
 
-Download the starter. `cd` into the __sql-practice__ folder.
+* Download the starter
+* Run `npm install`
+* Run all the tests with `npm test`
+
+ `cd` into the __sql-practice__ folder.
 
 Run SQLite on a database called __practice.db__.
 
@@ -12,7 +16,7 @@ In this practice, you will use these example table to make your queries:
 
 ![musicians-instruments-db-schema]
 
-Seed data has been provided for each table as follows: 
+Seed data has been provided for each table as follows:
 
 Table `musicians`:
 
@@ -65,34 +69,48 @@ Table `musician_instruments`:
 
 ### Create tables
 
-Run the following SQLite command to create the `musicians`, `instruments` and 
+Run the following SQLite command to create the `musicians`, `instruments` and
 `musician_instruments` tables, and insert the rows shown above.
 
 ```sql
 .read seed-data.sql
 ```
 
-> Remember: You can re-run this read command anytime you want to restore the 
+> Remember: You can re-run this read command anytime you want to restore the
 > data you have deleted.
 
-For the following steps, you should execute the SQL command in the SQLite3 CLI,
-but you can create and use a `.sql` file to to formulate the command.
+For the following steps, you should formulate the SQL commands in the
+`step-1.sql` and `step-2.sql` files then run the test specs using `npm test`.
+
 
 ## Step 1: `SELECT` the result of a joined table
 
-Run the SQL command that joins the `musicians` and `instruments` tables together, 
-`SELECT`ing both the first name of the musician and the type of instrument.
+Formulate the SQL command that joins the `musicians` and `instruments` tables
+together, `SELECT`ing both the first name of the musician and the type of
+instrument in the __sql-practices/step-1.sql__ file.
+
+Run the test specs in __sql-practices/step-1.sql__ file by running:
+
+```shell
+npm test test/step-1-spec.js
+```
 
 > Tip: You may need to have multiple `JOIN` statements.
 
 ## Step 2: Filter a query across a joined table
 
-Run the SQL command that selects the first and last name of each musician that 
-plays the piano.
+Formulate the SQL command that selects the first and last name of each musician
+that plays the piano in the __sql-practices/step-2.sql__ file.
+
+Run the test specs in __sql-practices/step-2.sql__ file by running:
+
+```shell
+npm test test/step-2-spec.js
+```
 
 ## Congratulations!
 
-You are now able to query and filter a query across tables in a many-to-many 
+You are now able to query and filter a query across tables in a many-to-many
 relationship!
 
 
